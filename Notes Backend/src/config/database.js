@@ -1,0 +1,11 @@
+import mongoose from "mongoose";
+
+async function connectDB() {
+  await mongoose.connect(
+    "mongodb://practise:nZlPnN6U3GY6HpOE@ac-avukadw-shard-00-00.ybftrro.mongodb.net:27017,ac-avukadw-shard-00-01.ybftrro.mongodb.net:27017,ac-avukadw-shard-00-02.ybftrro.mongodb.net:27017/PractiseDB?replicaSet=atlas-odlg0e-shard-0&ssl=true&authSource=admin",
+  );
+  console.log("connected to DB");
+}
+
+
+export default connectDB
