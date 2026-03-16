@@ -1,0 +1,194 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,#root {
+  height: 100%;
+  width: 100%;
+}
+
+html{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.create-post-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+  background-color: #f0f2f5;
+}
+
+.create-post-section form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-section input,textarea{
+  width: 300px;
+  padding:10px;
+  margin:10px 0 ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-post-section button{
+  background-color: #4caf50;
+  color: white;
+   cursor: pointer;
+   border: none;
+   border-radius: 4px;
+   padding: 10px 20px;
+}
+
+.feed-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.post-card{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(red, 0, 0, 0.1);
+  width: 400px;
+  margin-bottom: 20px;
+
+}
+
+.post-card img{
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top:10px;
+}
+
+.post-card h1{
+  margin-bottom: 10px;
+  font-size: 50px;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ---- CREATE POST ---- */
+
+.create-post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+  gap: 20px;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.create-post-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;           /* ✅ fills screen on mobile */
+  max-width: 480px;      /* ✅ won't go too wide on desktop */
+}
+
+.create-post-section input,
+.create-post-section textarea {
+  width: 100%;           /* ✅ was fixed 300px */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.create-post-section textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.create-post-section button {
+  width: 100%;           /* ✅ full width button on mobile */
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+/* ---- FEED ---- */
+
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100%;
+  width: 100%;
+  background-color: #f0f2f5;
+  padding: 20px 16px;    /* ✅ horizontal padding for small screens */
+  gap: 16px;
+}
+
+/* ---- POST CARD ---- */
+
+.post-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;           /* ✅ was fixed 400px */
+  max-width: 480px;      /* ✅ caps width on bigger screens */
+}
+
+.post-card img {
+  width: 100%;           /* ✅ image always fills card */
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.post-card h3 {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #333;
+}
