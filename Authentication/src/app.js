@@ -9,6 +9,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", AuthRouter);
-app.use("/api/post", PostRouter);
+app.use("/api/posts", PostRouter);
 
 export default app;

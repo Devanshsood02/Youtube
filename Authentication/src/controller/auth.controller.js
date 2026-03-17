@@ -30,7 +30,7 @@ export async function registerUser(req, res) {
 
   res.cookie("token", token);
 
-  res.status(201).json({
+  return res.status(201).json({
     message: "user created succesfully",
     user,
   });
