@@ -30,7 +30,7 @@ export const register = async (req,res)=>{
 
     console.log(req.body)
 
-const {email,contact,password,fullname} =req.body
+const {email,contact,password,fullname,isSeller} =req.body
 
 try{ 
 
@@ -53,7 +53,8 @@ try{
         email,
         contact,
         password,
-        fullname
+        fullname,
+        role:isSeller ?"seller":"buyer"
     })
 
 
